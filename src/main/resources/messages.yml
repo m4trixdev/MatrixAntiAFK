@@ -1,0 +1,26 @@
+# ========================================
+# MatrixAntiAFK - Mensagens
+# ========================================
+
+prefix: ""
+
+# Mensagens do sistema de desafio
+challenge:
+  # Mensagem quando o desafio é iniciado
+  warning: "&eVoce foi detectado como AFK. Complete o desafio para continuar!"
+
+  # Mensagem quando o desafio é completado com sucesso
+  success: "&aDesafio completado com sucesso!"
+
+# Mensagens de punição
+punishment:
+  # Mensagem de kick
+  kick: "&cVoce foi expulso por ficar AFK."
+
+# Mensagens dos comandos
+reload:
+  success: "&aConfiguracao recarregada com sucesso!"
+  error: "&cErro ao recarregar as configuracoes!"
+
+# Mensagem de sem permissão
+no-permission: "&cVoce nao tem permissao para usar este comando!"

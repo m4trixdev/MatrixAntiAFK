@@ -1,0 +1,32 @@
+name: MatrixAntiAFK
+version: 1.0.0
+description: Sistema Anti-AFK profissional com detecção inteligente e interface configurável
+author: MatrixDev
+website: https://github.com/m4trixdev
+api-version: 1.8
+main: br.com.matrixdev.antiafk.MatrixAntiAFK
+
+commands:
+  matrixantiafk:
+    description: Comando principal do MatrixAntiAFK
+    usage: /<command> [reload|test|info|help]
+    aliases: [mafk, antiafk]
+
+permissions:
+  matrixantiafk.*:
+    description: Todas as permissões do MatrixAntiAFK
+    children:
+      matrixantiafk.admin: true
+      matrixantiafk.bypass: true
+    default: false
+
+  matrixantiafk.admin:
+    description: Permite usar comandos administrativos
+    default: op
+
+  matrixantiafk.bypass:
+    description: Permite ignorar a detecção de AFK
+    default: false
+
+softdepend: []
+loadbefore: []

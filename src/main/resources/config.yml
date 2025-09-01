@@ -1,0 +1,70 @@
+# ========================================
+# MatrixAntiAFK - Configuração Principal
+# ========================================
+
+afk:
+  time: 100                    # Tempo em segundos para considerar um jogador AFK
+  check-interval: 10           # Intervalo em segundos para verificar jogadores
+  movement-threshold: 2.0      # Limite de movimento em blocos para detectar micro-movimentos
+  repetitive-limit: 10         # Número de ações repetitivas antes de considerar suspeito
+
+challenge:
+  timeout: 30                  # Tempo limite em segundos para completar o desafio
+
+  type: "click"                # Tipo de desafio (ex: click, math, etc)
+
+  materials:                   # Materiais que podem ser usados como 'corretos' no desafio
+    - "DIAMOND"
+    - "EMERALD"
+    - "GOLD_INGOT"
+    - "IRON_INGOT"
+    - "REDSTONE"
+    - "COAL"
+    - "APPLE"
+    - "BREAD"
+    - "ARROW"
+
+  menu:
+    title: "Verificacao Anti-AFK"
+    size: 27
+
+    fill-item:
+      enabled: true
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&7"
+      lore: []
+
+    correct-item:
+      name: "&aClique aqui!"
+      lore:
+        - "&7Clique neste item para provar"
+        - "&7que voce nao esta AFK"
+
+    custom-items: []
+    # Exemplo de uso para custom-items:
+    # custom-items:
+    #   - slot: 13
+    #     material: "STONE"
+    #     name: "&eItem Customizado"
+    #     lore:
+    #       - "&7Este é um item customizado no menu"
+    #   - slot: 22
+    #     material: "DIRT"
+    #     name: "&cOutro Item"
+    #     lore: []
+
+  sounds:
+    success:
+      name: "ENTITY_PLAYER_LEVELUP"
+      volume: 1.0
+      pitch: 1.0
+    fail:
+      name: "BLOCK_ANVIL_LAND"
+      volume: 1.0
+      pitch: 1.0
+
+punishment:
+  type: "kick"                 # Tipos disponíveis: kick, ban, teleport, command
+  ban-command: "ban {player} AFK detectado"
+  teleport-location: ""
+  custom-command: ""
